@@ -1,0 +1,10 @@
+
+{
+   "name":"Just-Watch-Scraper",
+   "version":"0.0.1",
+   "private":true,
+   "dependencies": {
+	    "request-promise": "3.0.0",
+	    "bluebird": "3.3.5"
+   }
+}
