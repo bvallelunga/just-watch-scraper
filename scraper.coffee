@@ -73,15 +73,21 @@ class Scraper
 			}
 			
 
+# Make Module Exportable
+module.exports = Scraper
+			
+
 # Initialize
 # --------------------------------
 # Scrape JustWatch.com and save
-# output to text file
-scraper = new Scraper()
-
-scraper.scrape(process.argv[2]).then (response)->
-	filePath = "#{__dirname}/output.txt"
-	data = JSON.stringify response
-
-	fs.writeFile filePath, data, ->
-		console.log "* File saved to #{filePath}"
+# output to text file if called 
+# from command line
+if require.main == module
+	scraper = new Scraper()
+	
+	scraper.scrape(process.argv[2]).then (response)->
+		filePath = "#{__dirname}/output.txt"
+		data = JSON.stringify response
+	
+		fs.writeFile filePath, data, ->
+			console.log "* File saved to #{filePath}"
