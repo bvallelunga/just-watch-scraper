@@ -1,5 +1,5 @@
 # Just Watch Scraper
-A scraper for the justwatch.com website that utilizes there
+A scraper for the justwatch.com website that utilizes their
 internal APIs. The scraper is capable of localizing the output
 data by providing an argument on the `scrape()` method.
 
